@@ -1,4 +1,4 @@
-div,h1,p,img {
+div,h1,h2,h3,h4,p,img {
   border: 1px solid red;
 }
 .page {
@@ -15,34 +15,44 @@ div,h1,p,img {
 .header {
   position: relative;
   display: flex;
-  height: 100vh;
+  height: 100vh !important;
+  background-color: #f2f2f2;
   max-height: 756px;
   min-height: 600px;
-  /* выше установили ограничения для секции */
+  /* В идеале минимальная высота в данном случае - 568 + 64 = 632px
+  (размер синего блока + его отступ сверху)
+  Иначе синий блок вылазит за границы при уменьшении высоты страницы меньше 638px;
+  поэтому overflow: hidden*/
+  overflow: hidden;
+  align-items: center;
+}
+.header_margin {
+  margin-bottom: 100px;
 }
 
 .header__title {
+  margin: 0;
   width: 730px;
   position: absolute;
   left: 64px;
-  align-self: center;
-  z-index: 700;
+  z-index: 4;
   font-size: 102px;
   line-height: 96px;
 }
 
 .header__subtitle {
+  margin: 0;
   width: 388px;
   position: absolute;
   left: 64px;
   bottom: 30px;
-  z-index: 600;
+  z-index: 3;
   font-size: 18px;
   line-height: 25px;
 }
 
 .header__link {
-
+  color: #2f80ed;
 }
 
 .header__main-illustration {
@@ -53,42 +63,244 @@ div,h1,p,img {
   right: 0;
   margin: 0;
   padding: 0;
+  z-index: 2;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   position: absolute;
   height: 568px;
   width: 568px;
-  background-color: #2e7fec;
+  background-color: #2f80ed;
   top: 64px;
   right: 0;
-  z-index: -1;
 }
 
 .logo {
-  position: absolute;
+  width: 182px;
+  height: 32px;
 }
 
 .logo_place_header{
+  background: url(../images/logo_place_header.svg);
+  position: absolute;
   top: 30px;
-  left:64px;
-  width: 182px;
-  height: 32px;
+  left: 64px;
   z-index: 999;
 }
 
 .logo_place_footer{
-  top: 0;
-  left: 0;
+  background: url(../images/logo_place_footer.svg);
   width: 183px;
   height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+.description {
+  margin-bottom: 100px;
+}
+/*тут бы тоже создать класс .description_margin,
+но тогда класс .description будет пустой и бесполезный,
+без дополнительных инструкций к нему. Далее та же песня с .digits*/
+
+.two-columns {
+  display:flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.two-columns__brief {
+  width: 175px;
+}
+.two-columns__brief-title {
+  margin: 0;
+  color: #2f80ed;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+.two-columns__main-text{
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-columns__span-accent{
+  font-weight:bold;
+}
+
+.two-columns__paragraf{
+  margin: 0;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+}
+
+.two-columns__paragraf_margin {
+  margin: 30px 0;
+}
+
+.digits {
+  margin-bottom: 100px;
+}
+
+.section__title {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 60px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.section__title_margin{
+  margin-bottom: 20px;
+}
+
+.section__subtitle {
+  width:60%;
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.table {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.table__cell{
+  margin-right: 0;
+  margin-top: 60px;
+  width: 250px;
+}
+
+.table__heading {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.table__text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.table__text_margin {
+  margin-top: 20px;
+}
+
+.feynman {
+  height: 790px;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 100px;
+}
+
+.feynman__title {
+  margin: 0 auto;
+  width: 648px;
+  font-size: 120px;
+  line-height: 1.15;
+  z-index: 5;
+  text-align: center;
+}
+
+.feynman__subtitle {
+  margin: 0 auto;
+  font-size: 36px;
+  line-height: 51px;
+  z-index: 4;
+  font-weight: normal;
+}
+
+.feynman__subtitle_margin {
+  margin-top: 70px;
+}
+
+.feynman__link {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  font-size: 36px;
+  line-height: 51px;
+  z-index: 3;
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+.feynman__photo {
+  width: 867;
+  height: 637px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.kaufman {
+  background-color: #1f1f1f;
+  padding: 90px 0;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.kaufman__triangle {
+  background: url(../images/kaufman-triangle.svg) no-repeat;
+  background-size: cover;
+  width: 877px;
+  height: 877px;
+  position: absolute;
+  top: 0;
+  right: -210px;
+  z-index:-1;
+}
+/* THEME DARK */
+
+.section__title_theme_dark {
+  width: 60%;
+  color: white;
+  font-size: 60px;
+  line-height: 1.15;
+}
+
+.section__subtitle_theme_dark {
+  width: 60%;
+  color: white;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.table_theme_dark {
+
+}
+
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+.table__heading_theme_dark {
+  color: white;
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.table__text_theme_dark {
+  color: white;
+  font-size: 18px;
+  line-height: 1.2;
 }
