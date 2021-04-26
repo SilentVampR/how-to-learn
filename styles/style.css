@@ -1,16 +1,34 @@
-div,h1,h2,h3,h4,p,img {
-  border: 1px solid red;
-}
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
+
+/* LOGO */
+
+.logo {
+  width: 182px;
+  height: 32px;
+}
+
+.logo_place_header{
+  background: url(../images/logo_place_header.svg) no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  z-index: 5;
+}
+
+.logo_place_footer{
+  background: url(../images/logo_place_footer.svg) no-repeat;
+  background-size: contain;
+  width: 183px;
+  height: 35px;
+}
+
+/* HEADER */
 
 .header {
   position: relative;
@@ -19,11 +37,7 @@ div,h1,h2,h3,h4,p,img {
   background-color: #f2f2f2;
   max-height: 756px;
   min-height: 600px;
-  /* В идеале минимальная высота в данном случае - 568 + 64 = 632px
-  (размер синего блока + его отступ сверху)
-  Иначе синий блок вылазит за границы при уменьшении высоты страницы меньше 638px;
-  поэтому overflow: hidden*/
-  overflow: hidden;
+  overflow: hidden; /*Чтобы синий квадрат не вылезал за нижнюю границу, когда высота экрана меньше необходимого */
   align-items: center;
 }
 .header_margin {
@@ -53,6 +67,7 @@ div,h1,h2,h3,h4,p,img {
 
 .header__link {
   color: #2f80ed;
+  text-decoration: none;
 }
 
 .header__main-illustration {
@@ -75,27 +90,7 @@ div,h1,h2,h3,h4,p,img {
   right: 0;
 }
 
-.logo {
-  width: 182px;
-  height: 32px;
-}
-
-.logo_place_header{
-  background: url(../images/logo_place_header.svg);
-  position: absolute;
-  top: 30px;
-  left: 64px;
-  z-index: 999;
-}
-
-.logo_place_footer{
-  background: url(../images/logo_place_footer.svg);
-  width: 183px;
-  height: 35px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+/* MAIN */
 
 .description {
 
@@ -151,7 +146,7 @@ div,h1,h2,h3,h4,p,img {
   margin-bottom: 100px;
 }
 
-.section__title {
+.section-title {
   width: 60%;
   margin: 0 auto;
   font-size: 60px;
@@ -159,11 +154,11 @@ div,h1,h2,h3,h4,p,img {
   text-align: center;
 }
 
-.section__title_margin{
+.section-title_digits {
   margin-bottom: 20px;
 }
 
-.section__subtitle {
+.section-subtitle {
   width:60%;
   margin: 0 auto;
   font-size: 24px;
@@ -211,8 +206,8 @@ div,h1,h2,h3,h4,p,img {
   padding-top: 100px;
 }
 
-.feynman__title {
-  margin: 0 auto;
+.section-title_feynman {
+  margin: 0 auto 70px;
   width: 648px;
   font-size: 120px;
   line-height: 1.15;
@@ -220,16 +215,12 @@ div,h1,h2,h3,h4,p,img {
   text-align: center;
 }
 
-.feynman__subtitle {
+.section-subtitle_feynman {
   margin: 0 auto;
   font-size: 36px;
   line-height: 51px;
   z-index: 4;
   font-weight: normal;
-}
-
-.feynman__subtitle_margin {
-  margin-top: 70px;
 }
 
 .feynman__link {
@@ -245,7 +236,7 @@ div,h1,h2,h3,h4,p,img {
 }
 
 .feynman__photo {
-  width: 867;
+  width: 867px;
   height: 637px;
   position: absolute;
   left: 0;
@@ -263,7 +254,7 @@ div,h1,h2,h3,h4,p,img {
 
 .kaufman__triangle {
   background: url(../images/kaufman-triangle.svg) no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 877px;
   height: 877px;
   position: absolute;
@@ -272,16 +263,17 @@ div,h1,h2,h3,h4,p,img {
   z-index:-1;
 }
 
-/* THEME DARK */
+/* MAIN THEME DARK */
 
-.section__title_theme_dark {
+.section-title_theme_dark {
   color: white;
   width: 60%;
   font-size: 60px;
   line-height: 1.15;
+  margin-bottom: 20px;
 }
 
-.section__subtitle_theme_dark {
+.section-subtitle_theme_dark {
   color: white;
   width: 60%;
   font-size: 24px;
@@ -309,7 +301,84 @@ div,h1,h2,h3,h4,p,img {
   line-height: 1.2;
 }
 
+/*FOOTER*/
+
 .footer {
   background-color: #1f1f1f;
   color: white;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__columns {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__columns_margin {
+  margin: 60px 0 40px;
+}
+
+.footer__columns_content_copyright {
+  flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__columns_content_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__columns_content_social {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__author {
+  margin: 0;
+  width: 50%;
+}
+
+.footer__author_margin {
+  margin: 18px 0;
+}
+
+.footer__column-heading {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.footer__column-heading_margin {
+  margin-bottom: 20px;
+}
+
+.footer__column-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.footer__column-link {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.footer__social-icon_margin {
+  margin-right: 10px;
 }
