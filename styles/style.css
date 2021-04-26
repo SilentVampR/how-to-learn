@@ -98,11 +98,12 @@ div,h1,h2,h3,h4,p,img {
 }
 
 .description {
+
+}
+
+.description_margin {
   margin-bottom: 100px;
 }
-/*тут бы тоже создать класс .description_margin,
-но тогда класс .description будет пустой и бесполезный,
-без дополнительных инструкций к нему. Далее та же песня с .digits*/
 
 .two-columns {
   display:flex;
@@ -143,6 +144,10 @@ div,h1,h2,h3,h4,p,img {
 }
 
 .digits {
+
+}
+
+.digits_margin {
   margin-bottom: 100px;
 }
 
@@ -266,18 +271,19 @@ div,h1,h2,h3,h4,p,img {
   right: -210px;
   z-index:-1;
 }
+
 /* THEME DARK */
 
 .section__title_theme_dark {
-  width: 60%;
   color: white;
+  width: 60%;
   font-size: 60px;
   line-height: 1.15;
 }
 
 .section__subtitle_theme_dark {
-  width: 60%;
   color: white;
+  width: 60%;
   font-size: 24px;
   line-height: 34px;
 }
@@ -294,13 +300,16 @@ div,h1,h2,h3,h4,p,img {
 }
 
 .table__heading_theme_dark {
-  color: white;
   font-size: 24px;
   line-height: 1.15;
 }
 
 .table__text_theme_dark {
-  color: white;
   font-size: 18px;
   line-height: 1.2;
+}
+
+.footer {
+  background-color: #1f1f1f;
+  color: white;
 }
