@@ -10,11 +10,11 @@
 .logo {
   width: 182px;
   height: 32px;
-  background-size: contain;
 }
 
 .logo_place_header{
   background: url(../images/logo_place_header.svg) no-repeat;
+  background-size: contain;
   position: absolute;
   top: 30px;
   left: 64px;
@@ -23,6 +23,7 @@
 
 .logo_place_footer{
   background: url(../images/logo_place_footer.svg) no-repeat;
+  background-size: contain;
   width: 183px;
   height: 35px;
 }
