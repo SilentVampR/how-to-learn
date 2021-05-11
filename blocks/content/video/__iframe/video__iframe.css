@@ -1,0 +1,8 @@
+.video__iframe {
+  max-width: 515px;
+  max-height: 316px;
+}
+
+.video__iframe:nth-of-type(1) {
+  margin-right: 20px;
+}
