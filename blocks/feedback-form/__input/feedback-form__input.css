@@ -1,0 +1,6 @@
+.feedback-form__input {
+  width: 100%;
+  padding: 5px;
+  font-family: inherit;
+  box-sizing: border-box;
+}

@@ -1,5 +1,7 @@
 .resources__logo-link {
   opacity: 1;
+  -webkit-transition: opacity 0.5s linear 0s;
+  -o-transition: opacity 0.5s linear 0s;
   transition: opacity 0.5s linear 0s;
 }
 

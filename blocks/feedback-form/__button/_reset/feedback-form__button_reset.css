@@ -1,0 +1,7 @@
+.feedback-form__button_reset {
+  background-color: #d7d7d7;
+}
+
+.feedback-form__button_reset:hover {
+  background-color: #d0d0d0;
+}

@@ -191,6 +191,20 @@
           <a href="#" class="resources__logo-link" target="_blank"><img src="./images/logo/resources-polka.svg" alt="Логотип ПОЛКА" class="resources__logo"></a>
         </div>
       </section>
+      <section class="feedback">
+        <h2 class="section-title">Пора оставить отзыв</h2>
+        <p class="section-subtitle">Отправь мне комментарий о том как тебе на Яндекс.Практикуме</p>
+        <form class="feedback-form" onsubmit="alert('Спасибо!');return false">
+          <label for="username" class="feedback-form__label">Имя Фамилия</label>
+          <input type="text" class="feedback-form__input" placeholder="Джонни Депп" name="username" id="username" required>
+          <label for="opinion" class="feedback-form__label">Комментарий</label>
+          <textarea class="feedback-form__textarea" placeholder="Напиши свой комментарий сюда" name="opinion" id="opinion" required></textarea>
+          <div class="feedback-form__buttons-container">
+            <button type="reset" class="feedback-form__button feedback-form__button_reset">Сбросить</button>
+            <button type="submit" class="feedback-form__button feedback-form__button_send">Отправить</button>
+          </div>
+        </form>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__columns">

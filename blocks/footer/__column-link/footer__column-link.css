@@ -3,9 +3,15 @@
   padding: 0;
   color: white;
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   opacity: 1;
+  -webkit-transition: opacity 1s linear 0s;
+  -o-transition: opacity 1s linear 0s;
   transition: opacity 1s linear 0s;
 }
 

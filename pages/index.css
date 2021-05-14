@@ -69,25 +69,25 @@
 @import url(../blocks/cards/__title/cards__title.css);
 @import url(../blocks/cards/__description/cards__description.css);
 
-/* CONTENT DESCRIPTION */
+/* DESCRIPTION */
 
 @import url(../blocks/description/description.css);
 
-/* CONTENT TECHNIQUES */
+/* TECHNIQUES */
 
 @import url(../blocks/techniques/techniques.css);
 
-/* CONTENT VIDEO */
+/* VIDEO */
 
 @import url(../blocks/video/video.css);
 @import url(../blocks/video/__iframes/video__iframes.css);
 @import url(../blocks/video/__iframe/video__iframe.css);
 
-/* CONTENT OAKLEY */
+/* OAKLEY */
 
 @import url(../blocks/oakley/oakley.css);
 
-/* CONTENT FEYNMAN */
+/* FEYNMAN */
 
 @import url(../blocks/feynman/feynman.css);
 @import url(../blocks/feynman/__title/feynman__title.css);
@@ -95,11 +95,11 @@
 @import url(../blocks/feynman/__photo/feynman__photo.css);
 @import url(../blocks/feynman/__link/feynman__link.css);
 
-/* CONTENT DIGITS */
+/* DIGITS */
 
 @import url(../blocks/digits/digits.css);
 
-/* CONTENT KHAN */
+/* KHAN */
 
 @import url(../blocks/khan/khan.css);
 @import url(../blocks/khan/__container/khan__container.css);
@@ -112,17 +112,32 @@
 @import url(../blocks/khan/__book-pic/khan__book-pic.css);
 @import url(../blocks/khan/__buy-link/khan__buy-link.css);
 
-/* CONTENT KAUFMAN */
+/* KAUFMAN */
 
 @import url(../blocks/kaufman/kaufman.css);
 @import url(../blocks/kaufman/__triangle/kaufman__triangle.css);
 
-/* CONTENT RESOURCES */
+/* RESOURCES */
 
 @import url(../blocks/resources/resources.css);
 @import url(../blocks/resources/__logo-zone/resources__logo-zone.css);
 @import url(../blocks/resources/__logo/resources__logo.css);
 @import url(../blocks/resources/__logo-link/resources__logo-link.css);
+
+/* FEEDBACK */
+
+@import url(../blocks/feedback/feedback.css);
+
+/* FEEDBACK-FORM */
+
+@import url(../blocks/feedback-form/feedback-form.css);
+@import url(../blocks/feedback-form/__input/feedback-form__input.css);
+@import url(../blocks/feedback-form/__textarea/feedback-form__textarea.css);
+@import url(../blocks/feedback-form/__label/feedback-form__label.css);
+@import url(../blocks/feedback-form/__buttons-container/feedback-form__buttons-container.css);
+@import url(../blocks/feedback-form/__button/feedback-form__button.css);
+@import url(../blocks/feedback-form/__button/_send/feedback-form__button_send.css);
+@import url(../blocks/feedback-form/__button/_reset/feedback-form__button_reset.css);
 
 /* FOOTER */
 
